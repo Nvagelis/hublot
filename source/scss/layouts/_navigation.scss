@@ -1,0 +1,125 @@
+.main-header{
+    .mobile-logo-black,
+    .mobile-logo-white{
+        @include centerer;
+    }
+    .mobile-logo-black{
+        display: block;
+        @include media-to(md){
+            display: none;
+        }
+    }
+    .mobile-logo-white{
+        display: none;
+    }
+}
+.main-header.active{
+    background-color: $mobile-menu-bg;
+    .mobile-logo-black{
+        display: none;
+    }
+    .mobile-logo-white{
+        display: block;
+        @include media-to(md){
+            display: none;
+        }
+    }
+}
+
+.header-logo{
+    float: left;
+    display: none;
+    @include media-to(md){
+        display: block;
+    }
+}
+.main-navigation{
+    display: none;
+    @include abs-pos;
+    background-color: $mobile-menu-bg;
+    margin-top: 40px;
+    width: 100%;
+    overflow: hidden;
+    @include media-to(md){
+        position: relative;
+        display: inline-block;
+        margin-top: 0;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+    }
+}
+.tools{
+    float: right;
+    display: none;
+    @include media-to(md){
+        display: block;
+    }
+}
+  
+.logo{
+    >img{
+        display: inline-block;
+        height: 25px;
+    }
+}
+
+.burger{
+    float: left;
+    display: block;
+    @include media-to(md){
+        display: none;
+    }
+}
+
+
+
+
+.main-header{
+    li{
+        @include font-size(18px);
+        display: block;
+        vertical-align: top;
+        text-transform: uppercase;
+        padding: 30px 0;
+        border-top: 1px solid #3e3e42;
+        &:first-child{
+            padding-left: 0;
+        }
+        @include media-to(md){
+            @include font-size(11px);
+            padding: 0 0 0 30px;
+            border-top: none;
+            display: inline-block;
+        }
+    }
+    a{
+        display: block;
+        transition: color .4s ease;
+        position: relative;
+    }
+}
+.tools{
+    li:last-child{
+        a{
+            font-size: 18px;
+        }
+    }
+}
+
+.main-header{
+    a.active{
+        &:after{
+            display: none;
+            @include media-to(md){
+                content: "";
+                background-color: $graf-color;
+                height: 3px;
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0; 
+            }
+        }
+    }
+}

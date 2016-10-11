@@ -1,0 +1,124 @@
+form{
+    padding-bottom: 35px;
+}
+#contact-us{
+    background-color: $white-bg;
+    .form-container{
+        padding-top: 20px;
+        color: $dark-cl;
+    }
+    h3{
+        @extend %dark-title-color;
+    }
+}
+#boutique{
+    background-color: $body-bg;
+    .form-container{
+        color: $white;
+        padding-top: 30px;
+        @include media-to(sm){
+            padding-top: 0;
+        }
+    }
+    h3{
+        @extend %grey-title-color;
+    }
+}
+
+.form-label{
+    @include init;
+    @include font-size(12px);
+    font-family: $font-light;
+    display: block;
+    letter-spacing: 1px;
+}
+.form-content{
+    @include init;
+    @include font-size(12px);
+    overflow: hidden;
+    width: 100%;
+    font-family: montserratlight, serif;
+    letter-spacing: 1px;
+    >span{
+        @include absolute(top -6px right 2%);
+        font-size: 20px;
+        color: $graf-color;
+    }
+}
+.form-select,
+.form-input{
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    padding-bottom: 5px;
+    width: 105%;
+    appearance: none;
+}
+#contact-us{
+    .form-select,
+    .form-input{
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+}
+#boutique{
+    .form-select,
+    .form-input{
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+}
+
+.form-head{
+    text-align: left;
+    padding-bottom: 30px;
+    h3{
+        @include font-size(16px);
+        font-family: $font-light;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 100;
+    }
+}
+.chk-box{
+    >input,
+    >label{
+        @include font-size(11px);
+        font-family: $secondary-font-family;
+        font-weight: 100;
+        display: inline-block;
+        vertical-align: middle;
+        color: $grey-button;
+    }
+    margin-right: 10px;
+    display: inline-block;
+}
+input[type="checkbox"]{
+    margin-bottom: 8px;
+}
+
+.form-textarea{
+    width: 100%;
+    border: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    min-height: 200px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.lightfix{
+    text-align: center;
+    .button-main{
+        width: 100%;
+        margin-top: 0;
+        @include media-to(sm){
+            width: auto;
+        }
+    }
+}
+.darkfix{
+    .button-main{
+        width: 100%;
+        @include media-to(sm){
+            width: auto;
+        }
+    }
+}

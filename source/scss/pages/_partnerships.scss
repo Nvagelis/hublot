@@ -1,0 +1,10 @@
+.partnerships-page{
+    .grid-box{
+        >a{
+            @include link-block;
+            @include abs-pos;
+            z-index: 2;
+        }
+    }
+}
+

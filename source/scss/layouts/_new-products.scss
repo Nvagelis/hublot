@@ -1,0 +1,73 @@
+.new-products{
+    @extend %light-title-color;
+    background-color: $news-prudoct-bg;
+    text-align: center;
+    .container{
+        padding: 60px 0;
+    }
+}
+.product-list{
+    background-color: $body-bg;
+    padding: 60px 0;
+}
+.prod-content{
+    background: none;
+    @include media-to(md){
+        @include bg-image(url('../images/collection/bg-product-list.png'));
+    }
+}
+.new-products{
+    text-transform: uppercase;
+
+    h3{
+        @include font-size(20px);
+        display: inline-block;
+        max-width: inherit;
+        color: $title-light;
+        line-height: 1.2em;
+        @include media-to(md){
+            @include font-size(14px);
+                max-width: 180px;
+        }
+        span{
+            @include font-size(10px);
+            font-family: $font-light;
+            display: block;
+            color: $title-secondary;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+    }
+}
+.prod-img{
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+    >img{
+        display: inline-block;
+        width: auto;
+        max-height: inherit;
+        max-width: 100%;
+        @include media-to(md){
+            max-height: 245px;
+        }
+    }
+}
+
+.is-new{
+    @include absolute(top 0 right 0);
+    z-index: 3;
+    display: block;
+    padding: 5px 5px 4px;
+    line-height: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $title-light;
+    border-top: 20px solid $graf-color;
+    border-left: 10px solid transparent;
+    margin-right: 8px;
+    >span{
+        display: block;
+        margin-top: -20px;
+    }
+}

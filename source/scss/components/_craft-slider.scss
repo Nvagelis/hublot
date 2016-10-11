@@ -1,0 +1,86 @@
+.craftmanship-page{
+    overflow: hidden;
+    position: relative;
+    .header-title{
+        top: 50%;
+    }
+}
+.craft-slider-wrap{
+    @include full-screen;
+    @include init;
+}
+.sl-header-container{
+    @include table-content;
+    z-index: 1;
+}
+.craft-slide{
+    @include full-screen;
+    position: absolute;
+    left: 0;
+    .header-title{
+        padding: 1px;  //fix for border of discover buuton
+        h1{
+            border-color: rgba(255,255,255, .2);
+        }
+    }
+    &:first-child{
+        .header-title{
+            h1{
+                border-color: $graf-color;
+            }
+        }
+    }
+}
+.dwn-angle{
+    @include font-size(90px);
+    @include centerer(true, true);
+    @include opacity(.2);
+    top: 110%;
+}
+
+@for $i from 1 through 5{
+    .craft-slide:nth-child(#{$i}){
+        top: 100% * ($i - 1);
+    }
+}
+
+.video-wrap{
+    @include abs-pos;
+    @include full-screen;
+    z-index: 0;
+    overflow: hidden;
+}
+#bg-video{
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.slider-nav{
+  @include positioning($position: absolute, $top: 50%, $right: 45px, $transx: 0, $transy: -50%);
+  z-index: 100;
+  >ul{
+      
+  }
+  li{
+    margin: 20px 0;
+  }
+  a{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $title-color;
+    transition: all .5s ease;
+    border-radius: 50%;
+    &:hover{
+        border-color: $graf-color;
+    }
+  }
+  li.active{
+    a{
+        background-color: $graf-color;
+        border-color: $graf-color;
+    }
+  }
+}

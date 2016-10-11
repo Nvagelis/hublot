@@ -1,0 +1,12 @@
+.watch-find{
+    @include bg-image (url(../images/collection/bg-watchfinder.jpg));
+    @extend %light-title-color;
+    text-align: center;
+    padding: 40px 0 30px;
+    .discover{
+        >span{
+            min-width: inherit;
+        }
+    }
+}
+

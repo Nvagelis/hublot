@@ -1,0 +1,42 @@
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin full-screen{
+    @extend %full-screen;
+}
+
+@mixin img-block{
+    @extend %img-block
+}
+
+@mixin link-block{
+    @extend %link-block;
+}
+
+@mixin init{
+    @extend %init;
+}
+
+@mixin table-content{
+    @extend %full-screen;
+    display: table;
+    position: relative;
+}
+
+@mixin table-cell($align: middle, $text:center){
+    display: table-cell;
+    vertical-align: $align;
+    text-align: $text;
+}

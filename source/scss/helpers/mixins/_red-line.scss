@@ -1,0 +1,8 @@
+@mixin red-line{
+    content: "";
+    background-color: $graf-color;
+    width: 60px;
+    height: 6px;
+    display: block;
+    margin: 20px auto 0;
+}

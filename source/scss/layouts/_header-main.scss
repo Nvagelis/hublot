@@ -1,0 +1,29 @@
+.home-page{
+    .header-container{
+        @include header-img(url('../images/home/sapphire-bg.jpg'));
+        >img{
+            @include centerer(true, false);
+        }
+    }
+}
+
+.news-page{
+    .header-container{
+        @include header-img(url('../images/news/hublotworld.jpg'));
+    }
+}
+
+.partnerships-page{
+    .header-container{
+        @include header-img(url('../images/partnerships/bg-top.jpg'));
+    }
+}
+
+.nav-actions{
+    @include absolute(top 15px left 25px);
+    z-index: 2;
+    >a{
+        font-size: 30px;
+        @extend %light-title-color;
+    }
+}

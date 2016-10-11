@@ -1,0 +1,125 @@
+//colors
+$white: #fff;
+$black: #000;
+
+$darker-white: #f2f2f2;
+
+$grey-lighter: #dcdcdc;
+$grey-button: #7d7d7d;
+$grey-footer: #4e4e4e;
+$grey-light: #777;
+$grey-dark: #999;
+$grey-mobile: #171717;
+
+$black-light: #1c1d22;
+$black-medium: #222;
+$black-dark: #191919;
+
+$red: #DE2B2B;
+$green: #697051;
+
+//text colors
+$text-color: $grey-light;
+$title-color: $white;
+$sec-title-col: $grey-dark;
+
+$footer-first: $white;
+$footer-second: $grey-footer;
+$box-title: $white;
+$title-light: $white;
+$title-secondary: $grey-dark;
+
+
+//link color
+$link-color: $grey-dark;
+//$link-hover-color: 
+
+//background color
+$body-bg: $black-dark;
+$red-bg: $red;
+$green-bg: $green;
+$white-bg: $white;
+$grey-bg: $darker-white;
+$footer-bg: $black-medium;
+$mobile-menu-bg: $grey-mobile;
+$news-prudoct-bg: $grey-mobile;
+$show-all-bg: $grey-mobile;
+
+//grapfics
+$graf-color: $red;
+
+//navigation colors
+$nav-bg: $white;
+$nav-text: $grey-dark;
+$nav-text-hover: $black;
+$nav-text-mobile: $white;
+
+//button colors
+$burger-btn: $black;
+
+$video-sq: $red;
+$video-tr: $white;
+
+//twitter-box colors
+$twitter-icon: $grey-lighter;
+$twitter-text: $black-light;
+$twitter-details: $red;
+$twitter-arrows: $grey-button;
+
+$quote-color: $black-light;
+
+//related news colors
+$news-text: $black;
+$border-color: $darker-white;
+
+//form colors
+$dark-cl: $black;
+
+// Typography
+$font-family-sans-serif: montserratregular, "Times New Roman", serif;
+$secondary-font-family: "Times New Roman", Times, serif;
+
+$font-light: montserratlight, serif;
+$font-bold: montserratextrabold, serif;
+
+$font-size-base: 18px;
+$line-height-base: 1.625;
+$font-weight: normal;
+$p-margin-bottom: 15px;
+
+
+$icons: (
+  search: "\f002",
+  share-alt: "\f1e0",
+  instagram: "\f16d",
+  facebook: "\f09a",
+  twitter: "\f099",
+  angle-left: "\f104",
+  angle-right: "\f105",
+  quote-left: "\f10d",
+  pinterest: "\f0d2",
+  google-plus: "\f0d5",
+  youtube-play: "\f16a",
+  snapchat: "\f2ab",
+  angle-down: "\f107",
+);
+
+
+// Media queries breakpoints
+
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  1024px;
+$screen-lg:                  1440px;
+
+$screen-sm-min: $screen-sm;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+
+$max-width: 1440px;
+
+$breakpoints: (
+    'sm' : $screen-sm-min,
+    'md' : $screen-md-min,
+    'lg' : $screen-lg-min,
+);

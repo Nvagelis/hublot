@@ -1,0 +1,77 @@
+.show-all{
+    background-color: $show-all-bg;
+    .container{
+        padding: 60px 0;
+    }
+}
+.grid-box-show{
+    >a{
+        @include link-block;
+        @include abs-pos;
+        z-index: 2;
+    }
+}
+.overlay{
+    @include abs-pos;
+    @include opacity(.5);
+    @extend %full-screen;
+    background-color: $black;
+}
+
+.show-container{
+    @extend .box-container;
+}
+.show-content{
+    @extend .box-content;
+    span{
+        transition: all .5s ease;
+    }
+}
+.show-header{
+    line-height: 1;
+    text-transform: uppercase;
+    >h3{
+        @include font-size(16px);
+        display: inline-block;
+        color: $box-title
+    }
+    >span{
+        @include opacity(0);
+        display: inline-block;
+        font-size: 16px;
+        color: $graf-color;
+        margin-left: 15px;
+    }
+}
+.show-sub{
+    @include init;
+    >span{
+        @include centerer(true, false);
+        @include font-size(14px);
+        @include opacity(.6);
+        font-family: $font-light;
+        color: $box-title;
+    }
+    .sub-second{
+        @include opacity(0);
+    }
+}
+
+.grid-box-show:hover{
+    
+    .grid-box-bg{
+        transform: scale(1.05);
+    }
+    .overlay{
+        @include opacity(0);
+    }
+    .show-icon{
+        @include opacity(1);
+    }
+    .sub-main{
+        @include opacity(0);
+    }
+    .sub-second{
+        @include opacity(.6);
+    }
+}

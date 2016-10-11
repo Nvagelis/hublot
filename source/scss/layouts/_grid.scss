@@ -1,0 +1,78 @@
+.container-fluid{
+    @include container-fixed;
+}
+.row{
+    @include make-row;
+}
+.container {
+  @include container-fixed;
+  width: 90%;
+}
+
+.grid-box-big{
+    @include make-sm-column(6,0);
+    height: 720px;
+}
+.grid-box-small{
+    @include make-sm-column(3,0);
+    height: 360px;
+}
+.grid-box-medium{
+    @include make-sm-column(4,0);
+    height: 480px;
+}
+.grid-box-medium-wide{
+    @include make-sm-column(6,0);
+    
+    height: 360px;
+}
+.grid-box-medium-height{
+    @include make-sm-column(3,0);
+    height: 720px;
+    display: none;
+    @include media-to(sm){
+        display: block;
+    }
+}
+.box-fix-3{
+    @include make-sm-column-offset(3);
+}
+.box-fix-6{
+    @include make-sm-column-offset(6);
+}
+
+
+.related-box{
+    @include make-sm-column(6);
+}
+
+.coll-box{
+    @include make-md-column(2,0);
+}
+
+.new-prod-box{
+    @include make-sm-column(3,0);
+}
+.grid-box-show{
+    @include make-sm-column(3,0);
+    height: 300px;
+}
+
+.form-box{
+    @include make-sm-column(3);
+}
+
+.form-head{
+    @include make-sm-column(12);
+}
+.form-elem{
+    @include make-sm-column(4);
+}
+.form-msg{
+    @include make-sm-column(6);
+    @include make-sm-column-offset(2);
+}
+.info-box{
+    @include make-sm-column(6,0);
+    height: 430px;
+}

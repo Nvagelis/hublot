@@ -1,0 +1,27 @@
+.contact-info{
+    background-color: $grey-bg;
+}
+.details{
+    text-align: left;
+    margin-left: 10%;
+    @include media-to(sm){
+        margin-left: 14%;
+    }
+    .small-title{
+        @extend %dark-title-color;
+        padding-bottom: 10px;
+    }
+    .med-times.address{
+        @extend %grey-title-color;
+        line-height: 1.6em;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+    &+&{
+        margin-top: 30px;
+    }
+}
+.map-bg{
+    @include wall-bg-image(url(../images/contact/map-hublot.jpg));
+    @include full-screen;
+}

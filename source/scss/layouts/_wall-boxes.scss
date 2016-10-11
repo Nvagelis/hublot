@@ -1,0 +1,83 @@
+.grid-box{
+    @include init;
+    overflow: hidden;
+}
+.grid-box-bg{
+    >a{
+        @include link-block;
+    }
+}
+.grid-box-bg{
+    @extend %wall-bg-image;
+    @include full-screen;
+    padding: 20px;
+    transition: transform .5s ease;
+}
+.box-container{
+    @include table-content;
+}
+.box-content{
+    @include table-cell;
+}
+.bottom-left{
+    vertical-align: bottom;
+    text-align: left;
+}
+
+// hover animation
+.type-media{
+    .media-title{
+        transition: margin-bottom 0.4s ease;
+        transition-delay: 0.25s;
+    }
+    .showmore{
+        @include absolute(left 0 bottom 0);
+        opacity: 0;
+        transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition-delay: 0s;
+    }
+}
+
+.type-media{
+    &:hover,
+    &:focus{
+        .media-title{
+            margin-bottom: 30px;
+            transition-delay: 0s;
+        }
+        .showmore{
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+    }
+}
+
+//  icon social box
+.type-social{
+    .social-icon{
+        @include absolute(top 0 left 0);
+        @include opacity(.5);
+        color: $box-title;
+        line-height: 1;
+        transition: opacity .3s ease;
+    }
+    &:hover,
+    &:focus{
+        .social-icon{
+            @include opacity(1);
+        }
+    }
+}
+
+.type-event{
+    &:hover,
+    &:focus{
+        .grid-box-bg{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.video-play{
+    @include centerer(true, true);
+}

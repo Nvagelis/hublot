@@ -1,0 +1,68 @@
+%img-block{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+%init{
+    position: relative;
+    z-index: 1;
+}
+
+%full-screen{
+    width: 100%;
+    height: 100%;
+}
+
+%link-block{
+    display: block;
+    @extend %full-screen;
+}
+
+%wall-bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+    overflow: hidden;
+}
+
+%header-img{
+    @extend %wall-bg-image;
+    width: 100%;
+    height: 750px;
+}
+
+%inline-text{
+    display: inline-block;
+    line-height: 1;
+}
+%prevnext{
+    @include positioning($position: absolute, $top: 50%, $transx: 0, $transy: -50%);
+    background-color: $graf-color;
+    cursor: pointer;
+}
+%title-content{
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+%light-title{
+    @extend %title-content;
+    font-family: $font-light;
+    display: inline-block;
+}
+%bold-title{
+    @extend %title-content;
+    font-family: $font-bold;
+}
+
+%light-title-color{
+    color: $title-color;
+}
+%dark-title-color{
+    color: $black;
+}
+%grey-title-color{
+    color: $sec-title-col;
+}

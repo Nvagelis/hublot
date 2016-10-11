@@ -1,0 +1,25 @@
+@mixin bg-image ($img, $posx:50%, $posy:50%){
+    background-image: $img;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: $posx $posy;
+}
+
+@mixin wall-bg-image ($img){
+    background-image: $img;
+    @extend %wall-bg-image;
+}
+
+@mixin header-img($img){
+    background-image: $img;
+    @extend %header-img;
+}
+
+@mixin bg-opacity($color, $alpha) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: transparent;
+    zoom: 1;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}

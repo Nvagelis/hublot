@@ -1,0 +1,74 @@
+.twitter-slide{
+    background-color: $white-bg;
+    position: relative;
+    @extend %full-screen;
+}
+.view{
+    @extend %full-screen;
+}
+.slide{
+    @extend %full-screen;
+}
+.text-wrap{
+    max-width: 75%;
+    margin: 0 auto;
+    >span{
+        font-size: 34px;
+        color: $twitter-icon;
+    }
+}
+.twitter-text{
+    @include font-size(20px);
+    font-family: $font-light;
+    padding: 20px 0;
+    @include media-to(sm){
+        @include font-size(16px);
+        padding: 5px 0;
+    }
+    @include media-to(lg){
+        @include font-size(24px);
+        padding: 50px 0;
+    }
+    >a{
+        color: $twitter-text;
+    }
+}
+.arrows{
+    @include font-size(50px);
+    color: $twitter-arrows;
+    >span{
+        @include positioning($top:50%, $transx:0, $transy:-50%);
+        line-height: 1;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    .prev{
+        left: 15px;
+        &:hover{
+            left: 5px;
+            color: $twitter-details;
+        }
+    }
+    .next{
+        right: 15px;
+        &:hover{
+            right: 5px;
+            color: $twitter-details;
+        }
+    }
+}
+.twitter-details{
+    @include font-size(12px);
+    text-transform: uppercase;
+    >a{
+        font-family: $font-bold;
+        color: $twitter-details;
+    }
+    .divider{
+        margin: 0 10px;
+    }
+    >span{
+        font-family: sans-serif;
+    }
+}
